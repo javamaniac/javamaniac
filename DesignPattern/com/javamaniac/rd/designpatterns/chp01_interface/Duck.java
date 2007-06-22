@@ -5,8 +5,8 @@ import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.QuackingBe
 
 public abstract class Duck {
 
-	protected FlyingBehaviors flyingBehaviors;
-	protected QuackingBehaviors quackingBehaviors;
+	private FlyingBehaviors flyingBehaviors;
+	private QuackingBehaviors quackingBehaviors;
 	
 	public abstract void display();
 	
@@ -15,25 +15,25 @@ public abstract class Duck {
 		System.out.println("Swim...");
 	}
 	
-	public void fly()
+	public void performFly()
 	{
 		flyingBehaviors.fly();
 	}
 	
-	public void quack()
+	public void performQuack()
 	{
 		quackingBehaviors.quack();
 	}
 	
-//	protected void performFly(FlyingBehaviors f)
-//	{
-//		flyingBehaviors = f;
-//	}
-//	
-//	protected void performQuack(QuackingBehaviors q)
-//	{
-//		quackingBehaviors = q;
-//	}
+	protected void setFlyingBehaviors(FlyingBehaviors f)
+	{
+		flyingBehaviors = f;
+	}
+	
+	protected void setQuackingBehaviors(QuackingBehaviors q)
+	{
+		quackingBehaviors = q;
+	}
 	
 	
 	

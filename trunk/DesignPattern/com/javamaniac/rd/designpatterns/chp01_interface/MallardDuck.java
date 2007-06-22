@@ -8,10 +8,8 @@ public class MallardDuck extends Duck {
 
 	public MallardDuck()
 	{
-		flyingBehaviors = new Flying();
-		quackingBehaviors = new Quacking();
-//		performFly(new Flying());
-//		performQuack(new Quacking());
+		setFlyingBehaviors(new Flying());
+		setQuackingBehaviors(new Quacking());
 	}
 	
 	public void display() {
@@ -26,15 +24,15 @@ public class MallardDuck extends Duck {
 		
 		duck.display();
 		duck.swim();
-		duck.fly();
-		duck.quack();
+		duck.performFly();
+		duck.performQuack();
 		
 		
-		duck.flyingBehaviors = new NoneFlying();
+		duck.setFlyingBehaviors(new NoneFlying());
 		duck.display();
 		duck.swim();
-		duck.fly();
-		duck.quack();
+		duck.performFly();
+		duck.performQuack();
 	}
 
 }

@@ -16,7 +16,7 @@ public class MiniDuckSimulator {
 		etang.add(new MallardDuck());
 		etang.add(new WoodenDuck());
 		Duck canardMalade = new MallardDuck();
-		canardMalade.flyingBehaviors = new NoneFlying();
+		canardMalade.setFlyingBehaviors(new NoneFlying());
 		etang.add(canardMalade);
 		
 
@@ -24,8 +24,8 @@ public class MiniDuckSimulator {
 			System.out.println("----");
 			duck.display();
 			duck.swim();
-			duck.fly();
-			duck.quack();			
+			duck.performFly();
+			duck.performQuack();			
 		}
 	}
 

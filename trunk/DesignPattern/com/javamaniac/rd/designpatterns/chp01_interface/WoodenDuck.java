@@ -6,10 +6,8 @@ public class WoodenDuck extends Duck {
 
 	public WoodenDuck()
 	{
-		flyingBehaviors = new NoneFlying();
-		quackingBehaviors = new NoneQuacking();
-//		performFly(new NoneFlying());
-//		performQuack(new NoneQuacking());
+		setFlyingBehaviors(new NoneFlying());
+		setQuackingBehaviors(new NoneQuacking());
 	}
 	
 	public void display() {
@@ -25,8 +23,8 @@ public class WoodenDuck extends Duck {
 		
 		duck.display();
 		duck.swim();
-		duck.fly();
-		duck.quack();		
+		duck.performFly();
+		duck.performQuack();		
 	}
 
 }

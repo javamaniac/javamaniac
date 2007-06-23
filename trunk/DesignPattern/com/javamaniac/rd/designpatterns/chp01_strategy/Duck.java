@@ -1,7 +1,7 @@
-package com.javamaniac.rd.designpatterns.chp01_interface;
+package com.javamaniac.rd.designpatterns.chp01_strategy;
 
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.FlyingBehaviors;
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.QuackingBehaviors;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.FlyingBehaviors;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.QuackingBehaviors;
 
 public abstract class Duck {
 

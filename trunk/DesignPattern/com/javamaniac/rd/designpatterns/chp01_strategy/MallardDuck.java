@@ -1,8 +1,8 @@
-package com.javamaniac.rd.designpatterns.chp01_interface;
+package com.javamaniac.rd.designpatterns.chp01_strategy;
 
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.Flying;
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.NoneFlying;
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.Quacking;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.Flying;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.NoneFlying;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.Quacking;
 
 public class MallardDuck extends Duck {
 

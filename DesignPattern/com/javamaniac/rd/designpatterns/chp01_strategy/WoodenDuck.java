@@ -1,6 +1,6 @@
-package com.javamaniac.rd.designpatterns.chp01_interface;
+package com.javamaniac.rd.designpatterns.chp01_strategy;
 
-import com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors.NoneFlying;
+import com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors.NoneFlying;
 
 public class WoodenDuck extends Duck {
 

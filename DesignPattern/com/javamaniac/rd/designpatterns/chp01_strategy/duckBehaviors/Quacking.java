@@ -1,4 +1,4 @@
-package com.javamaniac.rd.designpatterns.chp01_interface.duckBehaviors;
+package com.javamaniac.rd.designpatterns.chp01_strategy.duckBehaviors;
 
 public class Quacking implements QuackingBehaviors {
 

@@ -1,16 +1,12 @@
-package com.javamaniac.rd.designpatterns.chp03_decorator.myTest;
+package com.javamaniac.rd.designpatterns.chp03_decorator.breuvages;
 
-import com.javamaniac.rd.designpatterns.chp03_decorator.myTest.brevages.HouseBlend;
-import com.javamaniac.rd.designpatterns.chp03_decorator.myTest.condiments.Mocha;
-import com.javamaniac.rd.designpatterns.chp03_decorator.myTest.condiments.Whip;
+import com.javamaniac.rd.designpatterns.chp03_decorator.breuvages.brevages.HouseBlend;
+import com.javamaniac.rd.designpatterns.chp03_decorator.breuvages.condiments.Mocha;
+import com.javamaniac.rd.designpatterns.chp03_decorator.breuvages.condiments.Whip;
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		
+	public Main() {
 		// Bien...
 		Brevage houseBlend = new HouseBlend();
 		Brevage houseBlendWithMocha = new Mocha(houseBlend);
@@ -27,6 +23,14 @@ public class Main {
 		System.out.println("Price of a "
 				+ houseBlendWithMochaAndWhip.getDescription() + " is "
 				+ houseBlendWithMochaAndWhip.cost());
+
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		new Main();
 		
 	}
 

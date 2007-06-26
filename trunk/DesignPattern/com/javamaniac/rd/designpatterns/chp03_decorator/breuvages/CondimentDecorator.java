@@ -1,4 +1,4 @@
-package com.javamaniac.rd.designpatterns.chp03_decorator.myTest;
+package com.javamaniac.rd.designpatterns.chp03_decorator.breuvages;
 
 public abstract class CondimentDecorator extends Brevage {
 	

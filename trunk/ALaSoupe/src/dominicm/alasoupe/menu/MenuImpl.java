@@ -1,19 +1,20 @@
 package dominicm.alasoupe.menu;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Formatter;
 import java.util.List;
 
 public class MenuImpl implements Menu {
 
-	private List<Repas> listeRepas;
+	private List<Repas> listeRepas = new ArrayList<Repas>();
 	Date date; // date du début du menu
 	private String nom;
 
-	public MenuImpl(List<Repas> repas) {
-		listeRepas = repas;
-	}
+//	public MenuImpl(List<Repas> repas) {
+//		listeRepas = repas;
+//	}
 
 	public MenuImpl(Date date) {
 		this.date = date;
@@ -33,7 +34,9 @@ public class MenuImpl implements Menu {
 
 	public Repas createRepas(Date date, int moment) {
 		System.out.println("repas du " + DateFormat.getInstance().format(date) + " a été fait");
-		return new RepasImpl(date, moment);
+		Repas repas = new RepasImpl(date, moment); 
+		listeRepas.add(repas);
+		return repas;
 	}
 
 	public void setDate(Date date) {
@@ -46,17 +49,17 @@ public class MenuImpl implements Menu {
 
 	public String toString()
 	{
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		
 		for (Repas repas : listeRepas) {
 			
 			//TODO prendre en compte les 3 repas
 			String moment = ((repas.getMoment() == 2) ? "diner" : "souper");
 			// souper 2 juillet 2007 - Steak et frite 
-			String.format("%s %s - %s", moment, repas.getDate(), repas.getAllMets());
+			sb.append("\n").append(String.format("%s %s - %s", moment, repas.getDate(), repas.getAllMets()));
 			//sb.append(repas.getDate).append(" - ").append("\n")
 		}
-		return null;
+		return sb.toString();
 	}
 
 }

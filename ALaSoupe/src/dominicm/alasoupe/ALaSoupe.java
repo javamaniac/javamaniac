@@ -15,6 +15,8 @@ import dominicm.alasoupe.recettes.RecetteNotFoundException;
 
 public class ALaSoupe {
 
+	private CatalogueDeRecettes catalogueDeRecettes;
+
 	/**
 	 * @param args
 	 * @throws ParseException 
@@ -22,28 +24,68 @@ public class ALaSoupe {
 	 */
 	public static void main(String[] args) throws ParseException, RecetteNotFoundException {
 		
-		System.out.println("À la soupe!");
+		ALaSoupe aLaSoupe = new ALaSoupe();
+		aLaSoupe.run();
+	}
+
+	private void run() throws ParseException, RecetteNotFoundException {
+		catalogueDeRecettes = new CatalogueDeRecettesImpl();
+		
+		// création de recettes
+		initialisationDesRecettes();
+
+		
+		System.out.println("À la soupe!\n");
 		Menu menu = ALaSoupe.createMenu("2007-07-01");
 		menu.setNom("Menu vacances!");
 		
-		Repas repas = menu.createRepas(stringToDate("2007-07-01"), Menu.DINER);
-			
-		CatalogueDeRecettes catalogueDeRecettes = new CatalogueDeRecettesImpl();
+		
+		// repas #1
+		{
+			Repas repas = menu.createRepas(stringToDate("2007-07-01"), Menu.SOUPER);
+				
+			// création du repas
+			Mets soupe = catalogueDeRecettes.createMets("soupe", 3);
+			Mets steak = catalogueDeRecettes.createMets("steak", 3);
+			repas.addMets(soupe);
+			repas.addMets(steak);
+		}
+		
+		// repas #2
+		{
+			Repas repas = menu.createRepas(stringToDate("2007-07-02"), Menu.DINER);
+				
+			// création du repas
+			Mets club = catalogueDeRecettes.createMets("club sandwich", 3);
+			repas.addMets(club);
+		}
+		
+		// repas #3
+		{
+			Repas repas = menu.createRepas(stringToDate("2007-07-02"), Menu.SOUPER);
+				
+			// création du repas
+			Mets escalope = catalogueDeRecettes.createMets("escalope de veau", 3);
+			Mets fenouil = catalogueDeRecettes.createMets("fenouil", 3);
+			repas.addMets(escalope);
+			repas.addMets(fenouil);
+		}
+		
+		System.out.println("----------------------------------------");
+		System.out.println("\n\nMenu (" + menu.getNom() + ") du " + menu.getDate());
+		System.out.println(menu.toString());
+		
+		System.out.println("\n\nau revoir...");
+	}
+
+	private void initialisationDesRecettes() {
 		
 		// création de recettes
 		catalogueDeRecettes.createRecette("soupe");
 		catalogueDeRecettes.createRecette("steak");
-		
-		// création du repas
-		Mets soupe = catalogueDeRecettes.createMets("soupe", 3);
-		Mets steak = catalogueDeRecettes.createMets("steak", 3);
-		repas.addMets(soupe);
-		repas.addMets(steak);
-
-		System.out.println("\n\nMenu du " + menu.getDate());
-		System.out.println(menu.toString());
-		
-		System.out.println("au revoir...");
+		catalogueDeRecettes.createRecette("club sandwich");
+		catalogueDeRecettes.createRecette("escalope de veau");
+		catalogueDeRecettes.createRecette("fenouil");
 	}
 
 	/**
@@ -65,7 +107,7 @@ public class ALaSoupe {
 	 * @return
 	 * @throws ParseException
 	 */
-	private static Date stringToDate(String _date) throws ParseException {
+	public static Date stringToDate(String _date) throws ParseException {
 		// convertir la date String en Date
 		DateFormat df = DateFormat.getDateInstance();
 		Date date = df.parse(_date);

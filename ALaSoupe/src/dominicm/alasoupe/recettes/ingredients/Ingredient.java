@@ -1,5 +1,5 @@
 package dominicm.alasoupe.recettes.ingredients;
 
-public interface Ingedients {
+public interface Ingredient {
 
 }

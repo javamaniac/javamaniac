@@ -17,7 +17,10 @@ public class CatalogueDeRecettesImpl implements CatalogueDeRecettes {
 	public Mets createMets(String nomRecette, int nbPortion) throws RecetteNotFoundException {
 		if (!recettes.containsKey(nomRecette))
 		{
-			throw new RecetteNotFoundException("Aucune recette trouvée au nom de '" + nomRecette + "'");
+			// recette non trouvé, on la crée
+			System.err.println("Aucune recette trouvée au nom de '" + nomRecette + "'");
+			createRecette(nomRecette);
+			//throw new RecetteNotFoundException("Aucune recette trouvée au nom de '" + nomRecette + "'");
 		}
 		
 		return new MetsImpl(recettes.get(nomRecette), nbPortion);

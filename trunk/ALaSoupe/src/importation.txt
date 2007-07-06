@@ -1,0 +1,25 @@
+# Recette
+
+recette=Pizza
+portion=1
+
+texte=Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+
+texte=Et patati et patata et patati et patata et patati et patata et patati et patata et
+
+ingrédient=1||pain pita
+ingrédient=0.25||poivron
+ingrédient=2|c. à thé|sauce
+
+
+
+recette=Soupe
+portion=4
+
+texte=Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+
+texte=Et patati et patata et patati et patata et patati et patata et patati et patata et
+
+ingrédient=250|ml|eau
+ingrédient=1|pincé|sel
+

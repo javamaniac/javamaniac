@@ -2,7 +2,12 @@ package dominicm.alasoupe;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import dominicm.alasoupe.menu.Menu;
 import dominicm.alasoupe.menu.MenuImpl;
@@ -10,39 +15,54 @@ import dominicm.alasoupe.menu.Mets;
 import dominicm.alasoupe.menu.Repas;
 import dominicm.alasoupe.recettes.CatalogueDeRecettes;
 import dominicm.alasoupe.recettes.CatalogueDeRecettesImpl;
-import dominicm.alasoupe.recettes.Recette;
 import dominicm.alasoupe.recettes.RecetteNotFoundException;
+import dominicm.util.DateUtil;
 
+/**
+ * Service principal.
+ * @author Dominic
+ *
+ */
 public class ALaSoupe {
 
+	// singleton
+	private static ALaSoupe instance;
+	
 	private CatalogueDeRecettes catalogueDeRecettes;
+	private Map<Date, Menu> menus = new HashMap<Date, Menu>();
 
-	/**
-	 * @param args
-	 * @throws ParseException 
-	 * @throws RecetteNotFoundException 
-	 */
-	public static void main(String[] args) throws ParseException, RecetteNotFoundException {
-		
-		ALaSoupe aLaSoupe = new ALaSoupe();
-		aLaSoupe.run();
-	}
-
-	private void run() throws ParseException, RecetteNotFoundException {
+	private ALaSoupe() throws ParseException, RecetteNotFoundException
+	{
 		catalogueDeRecettes = new CatalogueDeRecettesImpl();
 		
 		// création de recettes
 		initialisationDesRecettes();
-
+		initialisationMenu();
 		
-		System.out.println("À la soupe!\n");
-		Menu menu = ALaSoupe.createMenu("2007-07-01");
+	}
+
+	// singleton
+	public static ALaSoupe getInstance() throws ParseException, RecetteNotFoundException
+	{
+		if (instance == null)
+		{
+			instance = new ALaSoupe();
+		}
+		return instance;
+	}
+	
+	private void initialisationMenu() throws ParseException, RecetteNotFoundException
+	{
+		
+		Date date = DateUtil.stringToDate("2007-07-01");
+
+		Menu menu = ALaSoupe.createMenu(date);
 		menu.setNom("Menu vacances!");
 		
 		
 		// repas #1
 		{
-			Repas repas = menu.createRepas(stringToDate("2007-07-01"), Menu.SOUPER);
+			Repas repas = menu.createRepas(date, Menu.SOUPER);
 				
 			// création du repas
 			Mets soupe = catalogueDeRecettes.createMets("soupe", 3);
@@ -53,7 +73,7 @@ public class ALaSoupe {
 		
 		// repas #2
 		{
-			Repas repas = menu.createRepas(stringToDate("2007-07-02"), Menu.DINER);
+			Repas repas = menu.createRepas(DateUtil.stringToDate("2007-07-02"), Menu.DINER);
 				
 			// création du repas
 			Mets club = catalogueDeRecettes.createMets("club sandwich", 3);
@@ -62,7 +82,7 @@ public class ALaSoupe {
 		
 		// repas #3
 		{
-			Repas repas = menu.createRepas(stringToDate("2007-07-02"), Menu.SOUPER);
+			Repas repas = menu.createRepas(DateUtil.stringToDate("2007-07-02"), Menu.SOUPER);
 				
 			// création du repas
 			Mets escalope = catalogueDeRecettes.createMets("escalope de veau", 3);
@@ -71,13 +91,26 @@ public class ALaSoupe {
 			repas.addMets(fenouil);
 		}
 		
-		System.out.println("----------------------------------------");
-		System.out.println("\n\nMenu (" + menu.getNom() + ") du " + menu.getDate());
-		System.out.println(menu.toString());
-		
-		System.out.println("\n\nau revoir...");
+		menus.put(date, menu);
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<Menu> getListMenu()
+	{
+		return new ArrayList(menus.values());
+	}
+
+	public Repas getRepas(Date date)
+	{
+		return null;
+	}
+	
+	public Menu getMenu(Date date)
+	{
+		return menus.get(date);
+	}
+	
+	
 	private void initialisationDesRecettes() {
 		
 		// création de recettes
@@ -94,24 +127,18 @@ public class ALaSoupe {
 	 * @return
 	 * @throws ParseException
 	 */
-	private static Menu createMenu(String _date) throws ParseException {
-
-		Date date = stringToDate(_date);
+	private static Menu createMenu(String _date) throws ParseException
+	{
+		Date date = DateUtil.stringToDate(_date);
 		
-		return new MenuImpl(date);
+		return createMenu(date);
 	}
 
-	/**
-	 * Convertir une date String en Date
-	 * @param _date
-	 * @return
-	 * @throws ParseException
-	 */
-	public static Date stringToDate(String _date) throws ParseException {
-		// convertir la date String en Date
-		DateFormat df = DateFormat.getDateInstance();
-		Date date = df.parse(_date);
-		return date;
+	private static Menu createMenu(Date date) 
+	{
+		return  new MenuImpl(date);
 	}
+
+
 
 }

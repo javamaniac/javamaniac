@@ -4,188 +4,132 @@
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Mets.java[Mets"/>
       <height="65"/>
       <width="156"/>
-      <x="453"/>
-      <y="123"/>
+      <x="454"/>
+      <y="216"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{RepasImpl.java[RepasImpl"/>
       <height="200"/>
       <width="189"/>
-      <x="236"/>
-      <y="576"/>
+      <x="242"/>
+      <y="644"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Menu.java[Menu"/>
       <height="138"/>
       <width="189"/>
-      <x="13"/>
-      <y="120"/>
+      <x="20"/>
+      <y="203"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MenuImpl.java[MenuImpl"/>
       <height="275"/>
       <width="186"/>
-      <x="15"/>
-      <y="319"/>
+      <x="16"/>
+      <y="412"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MetsImpl.java[MetsImpl"/>
       <height="202"/>
       <width="226"/>
       <x="453"/>
-      <y="328"/>
+      <y="636"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Repas.java[Repas"/>
       <height="116"/>
       <width="155"/>
-      <x="250"/>
-      <y="122"/>
+      <x="251"/>
+      <y="215"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{RecetteImpl.java[RecetteImpl"/>
       <height="154"/>
       <width="195"/>
-      <x="616"/>
-      <y="589"/>
+      <x="689"/>
+      <y="565"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classification.java[Classification"/>
       <height="-1"/>
       <width="-1"/>
-      <x="759"/>
-      <y="342"/>
+      <x="760"/>
+      <y="435"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
       <height="154"/>
       <width="276"/>
-      <x="1280"/>
-      <y="574"/>
+      <x="1287"/>
+      <y="670"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classifiable.java[Classifiable"/>
       <height="-1"/>
       <width="-1"/>
-      <x="754"/>
-      <y="119"/>
+      <x="755"/>
+      <y="212"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Recette.java[Recette"/>
       <height="-1"/>
       <width="-1"/>
-      <x="655"/>
-      <y="123"/>
+      <x="656"/>
+      <y="216"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettes.java[CatalogueDeRecettes"/>
       <height="-1"/>
       <width="-1"/>
-      <x="1351"/>
-      <y="115"/>
+      <x="1358"/>
+      <y="211"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeManger.java[GardeManger"/>
       <height="-1"/>
       <width="-1"/>
-      <x="1211"/>
-      <y="116"/>
+      <x="1212"/>
+      <y="209"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeMangerImpl.java[GardeMangerImpl"/>
       <height="110"/>
       <width="234"/>
-      <x="1130"/>
-      <y="374"/>
+      <x="1179"/>
+      <y="481"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{Aliment.java[Aliment"/>
       <height="-1"/>
       <width="-1"/>
-      <x="1097"/>
-      <y="117"/>
+      <x="1098"/>
+      <y="210"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{AlimentImpl.java[AlimentImpl"/>
       <height="-1"/>
       <width="-1"/>
-      <x="1084"/>
-      <y="281"/>
+      <x="1045"/>
+      <y="370"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{IngredientImpl.java[IngredientImpl"/>
       <height="129"/>
       <width="227"/>
-      <x="804"/>
-      <y="435"/>
+      <x="939"/>
+      <y="482"/>
    </type>
    <type>
       <name="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{Ingedients.java[Ingedients"/>
       <height="-1"/>
       <width="-1"/>
-      <x="877"/>
-      <y="119"/>
+      <x="878"/>
+      <y="212"/>
    </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MetsImpl.java[MetsImpl"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
       <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{RecetteImpl.java[RecetteImpl"/>
       <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Recette.java[Recette"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettes.java[CatalogueDeRecettes"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeMangerImpl.java[GardeMangerImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeManger.java[GardeManger"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeMangerImpl.java[GardeMangerImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{Aliment.java[Aliment"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{AlimentImpl.java[AlimentImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{Aliment.java[Aliment"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classification.java[Classification"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classifiable.java[Classifiable"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{RecetteImpl.java[RecetteImpl"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{IngredientImpl.java[IngredientImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{Ingedients.java[Ingedients"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -198,8 +142,50 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{RepasImpl.java[RepasImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Repas.java[Repas"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeMangerImpl.java[GardeMangerImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{Aliment.java[Aliment"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettes.java[CatalogueDeRecettes"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
       <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MetsImpl.java[MetsImpl"/>
       <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Mets.java[Mets"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{AlimentImpl.java[AlimentImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{Aliment.java[Aliment"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{IngredientImpl.java[IngredientImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes.ingredients{Ingedients.java[Ingedients"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MenuImpl.java[MenuImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Repas.java[Repas"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -212,15 +198,64 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{RepasImpl.java[RepasImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Repas.java[Repas"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeMangerImpl.java[GardeMangerImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.aliments{GardeManger.java[GardeManger"/>
       <bendpoints>
       </bendpoints>
    </relationship>
    <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MetsImpl.java[MetsImpl"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettesImpl.java[CatalogueDeRecettesImpl"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{RecetteImpl.java[RecetteImpl"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.realization.RealizationPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classification.java[Classification"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{Classifiable.java[Classifiable"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <type>
+      <name="=ALaSoupe0.1/src<dominicm.alasoupe{ALaSoupe.java[ALaSoupe"/>
+      <height="204"/>
+      <width="232"/>
+      <x="23"/>
+      <y="-21"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe{ALaSoupe.java[ALaSoupe"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MenuImpl.java[MenuImpl"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe{ALaSoupe.java[ALaSoupe"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.recettes{CatalogueDeRecettes.java[CatalogueDeRecettes"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <type>
+      <name="=ALaSoupe0.1/src<dominicm.alasoupe{Main.java[Main"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="403"/>
+      <y="-23"/>
+   </type>
+   <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{MenuImpl.java[MenuImpl"/>
-      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe.menu{Repas.java[Repas"/>
+      <sourceType="=ALaSoupe0.1/src<dominicm.alasoupe{Main.java[Main"/>
+      <targetType="=ALaSoupe0.1/src<dominicm.alasoupe{ALaSoupe.java[ALaSoupe"/>
       <bendpoints>
       </bendpoints>
    </relationship>

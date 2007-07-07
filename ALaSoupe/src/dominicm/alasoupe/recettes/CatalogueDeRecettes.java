@@ -6,6 +6,6 @@ public interface CatalogueDeRecettes {
 
 	Mets createMets(String string, int i) throws RecetteNotFoundException;
 	
-	public void createRecette(String nomRecette);
-
+	public Recette createRecette(String nomRecette);
+	
 }

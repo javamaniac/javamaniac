@@ -3,7 +3,7 @@
 	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" 
-				value="%5p [%x] %c %M %m %c.%M(%F:%L)%n" />
+				value="%5p [%x] %.20C [%-80m] %c.%M(%F:%L)%n" />
 		</layout>
 	</appender>
 	<appender name="monitorKino" class="org.apache.log4j.net.SocketAppender">
@@ -21,7 +21,7 @@
 	</appender>
 
 	<logger name="dominicm">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<root>

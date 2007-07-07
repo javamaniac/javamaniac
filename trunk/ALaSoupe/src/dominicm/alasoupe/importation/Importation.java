@@ -31,7 +31,7 @@ public class Importation
 
 	private Recette recetteCourante = null;
 
-	public Importation() throws ParseException, RecetteNotFoundException
+	public Importation() throws Exception
 	{
 		laSoupe = ALaSoupe.getInstance();
 		catalogueDeRecettes = laSoupe.getCatalogueDeRecettes();
@@ -78,7 +78,7 @@ public class Importation
 		
 		/*
 		System.out.println("----------------");
-		GardeManger gardeManger = ALaSoupe.getInstance().getGardeManger();
+		GardeManger gardeManger = laSoupe.getGardeManger();
 		List<Aliment> aliments = gardeManger.getListAliments();
 		for (Aliment aliment : aliments) 
 		{
@@ -89,7 +89,7 @@ public class Importation
 		
 	}
 
-	private void traiter(String prefixe, String suffixe) throws ParseException, RecetteNotFoundException
+	private void traiter(String prefixe, String suffixe) throws Exception
 	{
 		
 		if (prefixe.equalsIgnoreCase("recette"))
@@ -142,9 +142,9 @@ public class Importation
 		return new UniteMesureImpl(temp);
 	}
 
-	private Aliment traitementAliment(String alimentNom) throws ParseException, RecetteNotFoundException
+	private Aliment traitementAliment(String alimentNom)
 	{
-		GardeManger gardeManger = ALaSoupe.getInstance().getGardeManger();
+		GardeManger gardeManger = laSoupe.getGardeManger();
 		Aliment aliment = gardeManger.getAliment(alimentNom);
 		if (aliment == null)
 		{

@@ -47,7 +47,7 @@ public class CatalogueDeRecettesImpl implements CatalogueDeRecettes {
 		return sb.toString();
 	}
 
-	private List<Recette> getListRecettes()
+	public List<Recette> getListRecettes()
 	{
 		return new ArrayList<Recette>(recettes.values());
 	}

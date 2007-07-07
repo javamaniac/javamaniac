@@ -9,8 +9,6 @@ import dominicm.alasoupe.recettes.ingredients.UniteMesure;
 
 public interface Recette {
 
-	String getNom();
-
 	void setPortion(int i);
 	public void addIngredient(Quantite quantite, UniteMesure uniteMesure, Aliment aliment);
 
@@ -18,4 +16,5 @@ public interface Recette {
 
 	void appendInstructions(String instructions);
 
+	public String getNom();
 }

@@ -3,6 +3,16 @@ package dominicm.alasoupe.recettes.ingredients;
 public class UniteMesureImpl extends UniteMesure
 {
 	private String uniteMesure;
+	
+	public UniteMesureImpl()
+	{
+	}
+	
+	public UniteMesureImpl(String uniteMesure)
+	{
+		setUniteMesure(uniteMesure);
+	}
+	
 
 	public String getUniteMesure()
 	{
@@ -12,5 +22,10 @@ public class UniteMesureImpl extends UniteMesure
 	public void setUniteMesure(String uniteMesure)
 	{
 		this.uniteMesure = uniteMesure;
+	}
+	
+	public String toString()
+	{
+		return getUniteMesure();
 	}
 }

@@ -1,17 +1,21 @@
 package dominicm.alasoupe.importation;
 
-import org.apache.log4j.Logger;
-
 import java.io.File;
 import java.text.ParseException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import dominicm.alasoupe.ALaSoupe;
+import dominicm.alasoupe.aliments.Aliment;
 import dominicm.alasoupe.aliments.GardeManger;
-import dominicm.alasoupe.menu.Menu;
+import dominicm.alasoupe.recettes.CatalogueDeRecettes;
 import dominicm.alasoupe.recettes.Recette;
 import dominicm.alasoupe.recettes.RecetteImpl;
 import dominicm.alasoupe.recettes.RecetteNotFoundException;
+import dominicm.alasoupe.recettes.ingredients.Quantite;
+import dominicm.alasoupe.recettes.ingredients.UniteMesure;
+import dominicm.alasoupe.recettes.ingredients.UniteMesureImpl;
 import dominicm.util.FileUtils;
 
 public class Importation
@@ -22,10 +26,15 @@ public class Importation
 	private static final Logger logger = Logger.getLogger(Importation.class);
 
 	private ALaSoupe laSoupe;
+	private CatalogueDeRecettes catalogueDeRecettes;
+
+
+	private Recette recetteCourante = null;
 
 	public Importation() throws ParseException, RecetteNotFoundException
 	{
 		laSoupe = ALaSoupe.getInstance();
+		catalogueDeRecettes = laSoupe.getCatalogueDeRecettes();
 	}
 
 	public void importFromFile(File file) throws Exception
@@ -59,46 +68,46 @@ public class Importation
 			}
 			else
 			{
-				logger.debug("On laisse tomber... '" + ligne + "'");
+				//logger.debug("On laisse tomber... '" + ligne + "'");
 				// il s'agit d'une ligne non valide
 				// on ne fait rien
 			}
-
 		}
 		
+		System.out.println(catalogueDeRecettes);
+		
+		/*
 		System.out.println("----------------");
 		GardeManger gardeManger = ALaSoupe.getInstance().getGardeManger();
 		List<Aliment> aliments = gardeManger.getListAliments();
-		for (Menu aliment : aliments) 
+		for (Aliment aliment : aliments) 
 		{
 			System.out.println("----------------------------------------");
-			System.out.println("\n\nMenu (" + menu.getNom() + ") du " + menu.getDate());
-			System.out.println(menu.toString());
-		}
+			System.out.println("\nAliment : " + aliment.getNom());
+			System.out.println(aliment.toString());
+		}*/
 		
 	}
 
 	private void traiter(String prefixe, String suffixe) throws ParseException, RecetteNotFoundException
 	{
-		Recette recette = null;
-		StringBuilder sb = new StringBuilder();
-
+		
 		if (prefixe.equalsIgnoreCase("recette"))
 		{
-			recette = new RecetteImpl(suffixe);
+			// TODO utiliser une factory method 
+			recetteCourante = catalogueDeRecettes.createRecette(suffixe);
 			logger.info("Création de la recette " + suffixe + " est en cours...");
 		}
 
-		if (recette != null)
+		if (recetteCourante != null)
 		{
 			if (prefixe.equalsIgnoreCase("portion"))
 			{
-				recette.setPortion((new Integer(suffixe)).intValue());
+				recetteCourante.setPortion((new Integer(suffixe)).intValue());
 			}
 			else if (prefixe.equalsIgnoreCase("texte"))
 			{
-				// TODO enlever les derniers retours
-				sb.append(suffixe).append("\n\n");
+				recetteCourante.appendInstructions(suffixe);
 			}
 			else if (prefixe.equalsIgnoreCase("ingredient")
 					|| prefixe.equalsIgnoreCase("ingrédient"))
@@ -110,42 +119,46 @@ public class Importation
 				}
 				else
 				{
-					traitementQuantite(temp[0]);
-					traitementUnite(temp[1]);
-					traitementAliment(temp[2]);
+					Quantite quantite = traitementQuantite(temp[0]);
+					UniteMesure uniteMesure = traitementUnite(temp[1]);
+					Aliment aliment = traitementAliment(temp[2]);
+					
+					// FIXME 111 utilié un vrai RecetteImpl
+					recetteCourante.addIngredient(quantite, uniteMesure, aliment);
 				}
 					
 			}
 		}
 	}
 
-	private void traitementQuantite(String temp)
+	private Quantite traitementQuantite(String temp)
 	{
-		int quantite = (new Integer(temp)).intValue();
+		return new Quantite(temp);
 	}
 
-	private void traitementUnite(String temp)
+	private UniteMesure traitementUnite(String temp)
 	{
-		// TODO création des quantités
-		String unite = temp;
+		// TODO utiliser une factory pour créer les unites
+		return new UniteMesureImpl(temp);
 	}
 
-	private void traitementAliment(String temp) throws ParseException, RecetteNotFoundException
+	private Aliment traitementAliment(String alimentNom) throws ParseException, RecetteNotFoundException
 	{
-		String aliment = temp;
-		
 		GardeManger gardeManger = ALaSoupe.getInstance().getGardeManger();
-		if (gardeManger.getAliment(aliment) == null)
+		Aliment aliment = gardeManger.getAliment(alimentNom);
+		if (aliment == null)
 		{
-			gardeManger.createAliment(aliment);
-			logger.info("Création de l'aliment : " + aliment);
+			gardeManger.createAliment(alimentNom);
+			aliment = gardeManger.getAliment(alimentNom);
 		}
+
+		return aliment;
 	}
 
 	public static void main(String args[]) throws Exception
 	{
 		Importation i = new Importation();
 		File file = new File("D:/workspace/ALaSoupe0.1/src/importation.txt");
-		i.importFromFile(file );
+		i.importFromFile(file);
 	}
 }

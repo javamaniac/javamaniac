@@ -1,9 +1,7 @@
 package dominicm.alasoupe;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -40,8 +38,8 @@ public class ALaSoupe {
 		gardeManger = new GardeMangerImpl();
 		
 		// création de recettes
-		initialisationDesRecettes();
-		initialisationMenu();
+		//initialisationDesRecettes();
+		//initialisationMenu();
 		
 	}
 
@@ -178,6 +176,11 @@ public class ALaSoupe {
 	public GardeManger getGardeManger()
 	{
 		return gardeManger;
+	}
+
+	public CatalogueDeRecettes getCatalogueDeRecettes()
+	{
+		return catalogueDeRecettes;
 	}
 
 

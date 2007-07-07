@@ -13,7 +13,7 @@ public class Main {
 	 * @throws ParseException 
 	 * @throws RecetteNotFoundException 
 	 */
-	public static void main(String[] args) throws ParseException, RecetteNotFoundException {
+	public static void main(String[] args) throws Exception {
 		
 		System.out.println("À la soupe!\n");
 

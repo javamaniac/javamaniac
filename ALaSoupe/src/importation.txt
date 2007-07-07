@@ -23,3 +23,9 @@ texte=Et patati et patata et patati et patata et patati et patata et patati et p
 ingrédient=250|ml|eau
 ingrédient=1|pincé|sel
 
+recette=Steak
+recette=Poulet
+recette=Grilled cheese
+recette=Côtes levées
+recette=couscous
+

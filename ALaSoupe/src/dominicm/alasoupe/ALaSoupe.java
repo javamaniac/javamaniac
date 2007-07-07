@@ -1,5 +1,8 @@
 package dominicm.alasoupe;
 
+import org.apache.log4j.Logger;
+
+import java.io.File;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,6 +12,7 @@ import java.util.Map;
 
 import dominicm.alasoupe.aliments.GardeManger;
 import dominicm.alasoupe.aliments.GardeMangerImpl;
+import dominicm.alasoupe.importation.Importation;
 import dominicm.alasoupe.menu.Menu;
 import dominicm.alasoupe.menu.MenuImpl;
 import dominicm.alasoupe.menu.Mets;
@@ -24,6 +28,10 @@ import dominicm.util.DateUtil;
  *
  */
 public class ALaSoupe {
+	/**
+	 * Logger for this class
+	 */
+	private static final Logger logger = Logger.getLogger(ALaSoupe.class);
 
 	// singleton
 	private static ALaSoupe instance;
@@ -32,10 +40,12 @@ public class ALaSoupe {
 	private GardeManger gardeManger;
 	private Map<Date, Menu> menus = new HashMap<Date, Menu>();
 
-	private ALaSoupe() throws ParseException, RecetteNotFoundException
+	private ALaSoupe() throws Exception
 	{
+		logger.info("Création de ALaSoupe()\n\n\n");
 		catalogueDeRecettes = new CatalogueDeRecettesImpl();
 		gardeManger = new GardeMangerImpl();
+		
 		
 		// création de recettes
 		//initialisationDesRecettes();
@@ -44,11 +54,15 @@ public class ALaSoupe {
 	}
 
 	// singleton
-	public static ALaSoupe getInstance() throws ParseException, RecetteNotFoundException
+	public static ALaSoupe getInstance() throws Exception
 	{
 		if (instance == null)
 		{
 			instance = new ALaSoupe();
+
+			File file = new File("D:/workspace/ALaSoupe0.1/src/importation.txt");
+			(new Importation()).importFromFile(file);
+
 		}
 		return instance;
 	}

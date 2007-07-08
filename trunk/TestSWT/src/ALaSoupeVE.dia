@@ -1,13 +1,6 @@
 <uml>
    <greenVersion="20500"/>
    <type>
-      <name="=TestSWT/src<mets{MenuShell.java[MenuShell"/>
-      <height="-1"/>
-      <width="-1"/>
-      <x="78"/>
-      <y="61"/>
-   </type>
-   <type>
       <name="=TestSWT/src<mets{RepasComposite.java[RepasComposite"/>
       <height="-1"/>
       <width="-1"/>
@@ -51,29 +44,8 @@
    </type>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=TestSWT/src<mets{MenuShell.java[MenuShell"/>
-      <targetType="=TestSWT/src<mets{Stationnement.java[Stationnement"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
       <sourceType="=TestSWT/src<mets{MenuComposite.java[MenuComposite"/>
       <targetType="=TestSWT/src<mets{LabelMenuComposite.java[LabelMenuComposite"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=TestSWT/src<mets{RepasComposite.java[RepasComposite"/>
-      <targetType="=TestSWT/src<mets{MetsComposite.java[MetsComposite"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=TestSWT/src<mets{MenuShell.java[MenuShell"/>
-      <targetType="=TestSWT/src<mets{MenuComposite.java[MenuComposite"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -86,6 +58,13 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=TestSWT/src<mets{MenuComposite.java[MenuComposite"/>
+      <targetType="=TestSWT/src<mets{RepasComposite.java[RepasComposite"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
       <sourceType="=TestSWT/src<mets{MetsStationnement.java[MetsStationnement"/>
       <targetType="=TestSWT/src<mets{MetsComposite.java[MetsComposite"/>
       <bendpoints>
@@ -93,8 +72,8 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=TestSWT/src<mets{MenuComposite.java[MenuComposite"/>
-      <targetType="=TestSWT/src<mets{RepasComposite.java[RepasComposite"/>
+      <sourceType="=TestSWT/src<mets{RepasComposite.java[RepasComposite"/>
+      <targetType="=TestSWT/src<mets{MetsComposite.java[MetsComposite"/>
       <bendpoints>
       </bendpoints>
    </relationship>

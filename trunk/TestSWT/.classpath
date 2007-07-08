@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="lib-jFace-eclipse-3.3/org.eclipse.core.commands_3.3.0.I20070605-0010.jar"/>
 	<classpathentry kind="con" path="SWT_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ALaSoupe0.1"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

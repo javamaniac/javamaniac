@@ -1,5 +1,7 @@
 import org.eclipse.swt.widgets.*;
 
+import examples.ListeAjoutRetire;
+
 public class SimpleShell {
     
      SimpleShell( )    {
@@ -17,8 +19,7 @@ public class SimpleShell {
     }
      
      public static void main(String[] args){
-         //SimpleShell ss = new SimpleShell( );
-         TableShellExample t = new TableShellExample();
+         SimpleShell ss = new SimpleShell( );
      }
      
 }

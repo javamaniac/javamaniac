@@ -8,16 +8,16 @@ import org.eclipse.swt.widgets.Group;
 
 public class MetsStationnement extends Composite {
 
-	public MetsStationnement(Composite parent) {
+	public MetsStationnement(Composite parent, String recette) {
 		super(parent, SWT.None);
 
 		GridLayout gridLayout = new GridLayout();
 		gridLayout.numColumns = 4;
 		setLayout(gridLayout);
 		
-		new MetsComposite(this, "Club Sandwich");
-		new MetsComposite(this, "Poutine");
-		new MetsComposite(this, "Steak");
+		new MetsComposite(this, recette);
+		/*new MetsComposite(this, "Poutine");
+		new MetsComposite(this, "Steak");*/
 		
 		pack();
 

@@ -41,18 +41,15 @@ public class RepasComposite extends Composite {
 
 	    ALaSoupe aLaSoupe;
 		try {
-			aLaSoupe = new ALaSoupe();
-			Menu menu = aLaSoupe.getMenu();	  
-			Repas repas = menu.getRepas(ALaSoupe.stringToDate("2007-07-01"));
-			List<Mets> listeMets =  repas.getListMets();
-			for (Mets mets : listeMets) {
-				new MetsComposite(group1, mets);
-			}
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (RecetteNotFoundException e) {
-			// TODO Auto-generated catch block
+			aLaSoupe = ALaSoupe.getInstance();
+//			Menu menu = aLaSoupe.getMenu();	  
+//			Repas repas = menu.getRepas(ALaSoupe.stringToDate("2007-07-01"));
+//			List<Mets> listeMets =  repas.getListMets();
+//			for (Mets mets : listeMets) {
+//				new MetsComposite(group1, mets);
+//			}
+		} catch (Exception e) {
+			// TODO 5 géré l'erreur
 			e.printStackTrace();
 		}
 	    //Repas repas = new RepasImpl();

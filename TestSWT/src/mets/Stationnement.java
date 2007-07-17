@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Text;
 import dominicm.alasoupe.ALaSoupe;
 import dominicm.alasoupe.recettes.Recette;
 
-public class Stationnement extends Composite
+public class Stationnement
 {
 	/**
 	 * Logger for this class
@@ -32,20 +32,55 @@ public class Stationnement extends Composite
 	private static final Logger logger = Logger.getLogger(Stationnement.class);
 	private Group group1;
 	private Text text;
+	private Composite stationnement;
+	private Messager messager;
 
-	public Stationnement(Composite parent, int style)
+	public Stationnement(Messager messager)
 	{
-		super(parent, style);
-
 		// setLayout(new FillLayout());
 		// setLayout(new RowLayout());
+		this.messager = messager;
+		
+		Shell shell = messager.getShell();
+		stationnement = new Composite(shell, 0);
+		stationnement.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_CYAN));
 
-		this.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_CYAN));
-
-		group1 = new Group(parent, SWT.SHADOW_IN);
+		group1 = new Group(stationnement, SWT.SHADOW_IN);
 		group1.setText("Stationnement");
 		group1.setLayout(new RowLayout(SWT.VERTICAL));
 
+		createBoutonAjoutRecette();
+
+		createListeRecettes(messager);
+
+		group1.pack();
+		stationnement.pack();
+
+		// initialize();
+	}
+
+	private void createListeRecettes(Messager messager)
+	{
+		try
+		{
+			// TODO remplacer getCatalogueDeRecettes().getListRecettes() par
+			// selection.getListRecettes()
+			List<Recette> recettes = ALaSoupe.getInstance()
+					.getCatalogueDeRecettes().getListRecettes();
+			for (Recette recette : recettes)
+			{
+				new MetsStationnement(group1, recette.getNom(), messager);
+			}
+		}
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private void createBoutonAjoutRecette()
+	{
 		Button ajoutRecette = new Button(group1, SWT.PUSH);
 		ajoutRecette.setText("ajouter des recettes");
 		ajoutRecette.addSelectionListener(new SelectionListener()
@@ -65,27 +100,6 @@ public class Stationnement extends Composite
 				// text.setText("No worries!");
 			}
 		});
-
-		try
-		{
-			// TODO remplacer getCatalogueDeRecettes().getListRecettes() par
-			// selection.getListRecettes()
-			List<Recette> recettes = ALaSoupe.getInstance()
-					.getCatalogueDeRecettes().getListRecettes();
-			for (Recette recette : recettes)
-			{
-				new MetsStationnement(group1, recette.getNom());
-			}
-		}
-		catch (Exception e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		pack();
-
-		// initialize();
 	}
 	
 	private void ouvrirFenetre()
@@ -107,7 +121,7 @@ public class Stationnement extends Composite
 		
         text = new Text(sShell, 0);
 		Button b = new Button(sShell, SWT.PUSH);
-        b.setText("ok");
+        b.setText("ajouter");
         b.addSelectionListener(new SelectionListener()
 		{
 
@@ -151,8 +165,8 @@ public class Stationnement extends Composite
 
 	private void ajoutRecette(String text)
 	{
-		new MetsStationnement(group1, text);
-		pack();
+		new MetsStationnement(stationnement, text, messager);
+		stationnement.pack();
 	}
 
 

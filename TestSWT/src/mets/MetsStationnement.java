@@ -6,20 +6,20 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 
-public class MetsStationnement extends Composite {
+public class MetsStationnement {
 
-	public MetsStationnement(Composite parent, String recette) {
-		super(parent, SWT.None);
-
+	public MetsStationnement(Composite parent, String recette, Messager messager) {
+		
+		Composite metsStationnement = new Composite(parent, 0);
 		GridLayout gridLayout = new GridLayout();
 		gridLayout.numColumns = 4;
-		setLayout(gridLayout);
+		metsStationnement.setLayout(gridLayout);
 		
-		new MetsComposite(this, recette);
+		new MetsComposite(metsStationnement, recette, messager);
 		/*new MetsComposite(this, "Poutine");
 		new MetsComposite(this, "Steak");*/
 		
-		pack();
+		metsStationnement.pack();
 
 		//initialize();
 	}

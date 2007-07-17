@@ -2,6 +2,7 @@ package mets;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
@@ -16,6 +17,15 @@ public class LabelMenuComposite {
 		
 		Label l = new Label(parent, SWT.NONE);
 		l.setText(nom);
+
+		GridData g = new GridData();
+		l.setLayoutData(g);
+		g.grabExcessHorizontalSpace = true;
+		g.horizontalAlignment = GridData.FILL;
+		g.heightHint = 20;
+
+
+		
 		//pack();
 		
 		//initialize(nom);

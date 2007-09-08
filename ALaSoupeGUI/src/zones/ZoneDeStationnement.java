@@ -1,4 +1,4 @@
-package dominicm.alasoupe.gui;
+package zones;
 
 import java.util.List;
 
@@ -22,20 +22,27 @@ import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
 import dominicm.alasoupe.ALaSoupe;
+import dominicm.alasoupe.gui.Messager;
+import dominicm.alasoupe.gui.MetsStationnement;
 import dominicm.alasoupe.recettes.Recette;
 
-public class Stationnement
+/**
+ * Zone de stationnement des recettes où l'on trouve la présélection des recettes.
+ * @author Dominic
+ *
+ */
+public class ZoneDeStationnement
 {
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(Stationnement.class);
+	private static final Logger logger = Logger.getLogger(ZoneDeStationnement.class);
 	private Group group1;
 	private Text text;
 	private Composite stationnement;
 	private Messager messager;
 
-	public Stationnement(Messager messager)
+	public ZoneDeStationnement(Messager messager)
 	{
 		// setLayout(new FillLayout());
 		// setLayout(new RowLayout());

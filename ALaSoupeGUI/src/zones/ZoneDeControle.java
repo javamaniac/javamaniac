@@ -1,4 +1,4 @@
-package dominicm.alasoupe.gui;
+package zones;
 
 
 import java.util.List;
@@ -18,18 +18,26 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-public class Boutons
+import dominicm.alasoupe.gui.Messager;
+
+/**
+ * Zone centrale où l'on trouve les boutons de controle de fenetre.
+ * (Supression, Autre, Nombre de portion)
+ * @author Dominic
+ *
+ */
+public class ZoneDeControle
 {
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(Boutons.class);
+	private static final Logger logger = Logger.getLogger(ZoneDeControle.class);
 
 	protected static final int BACKSPACE = 8;
 	protected static final int DELETE = 127;
 	private Messager messager;
 
-	public Boutons(Messager messager)
+	public ZoneDeControle(Messager messager)
 	{
 		this.messager = messager;
 		Shell shell = messager.getShell();

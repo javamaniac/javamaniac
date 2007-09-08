@@ -13,6 +13,10 @@ import org.eclipse.swt.widgets.Label;
 
 import dominicm.alasoupe.recettes.Recette;
 
+/**
+ * 
+ * @author Dominic
+ */
 public class MetsComposite {
 
 	private Button recette = null;  // @jve:decl-index=0:visual-constraint="17,18"

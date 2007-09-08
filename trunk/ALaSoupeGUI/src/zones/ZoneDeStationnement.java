@@ -21,9 +21,11 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
+import pojos.Messager;
+
+import composites.MetsStationnement;
+
 import dominicm.alasoupe.ALaSoupe;
-import dominicm.alasoupe.gui.Messager;
-import dominicm.alasoupe.gui.MetsStationnement;
 import dominicm.alasoupe.recettes.Recette;
 
 /**

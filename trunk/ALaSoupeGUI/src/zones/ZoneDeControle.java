@@ -18,7 +18,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import dominicm.alasoupe.gui.Messager;
+import pojos.Messager;
+
 
 /**
  * Zone centrale où l'on trouve les boutons de controle de fenetre.

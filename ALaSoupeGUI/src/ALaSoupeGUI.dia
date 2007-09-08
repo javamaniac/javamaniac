@@ -11,36 +11,29 @@
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MetsStationnement.java[MetsStationnement"/>
       <height="-1"/>
       <width="-1"/>
-      <x="810"/>
-      <y="270"/>
+      <x="845"/>
+      <y="401"/>
    </type>
    <type>
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
       <height="-1"/>
       <width="-1"/>
-      <x="387"/>
-      <y="-7"/>
-   </type>
-   <type>
-      <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Stationnement.java[Stationnement"/>
-      <height="-1"/>
-      <width="-1"/>
-      <x="929"/>
-      <y="-20"/>
+      <x="624"/>
+      <y="-10"/>
    </type>
    <type>
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MetsComposite.java[MetsComposite"/>
       <height="-1"/>
       <width="-1"/>
-      <x="837"/>
-      <y="400"/>
+      <x="844"/>
+      <y="523"/>
    </type>
    <type>
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{LabelMenuComposite.java[LabelMenuComposite"/>
       <height="-1"/>
       <width="-1"/>
-      <x="621"/>
-      <y="139"/>
+      <x="599"/>
+      <y="604"/>
    </type>
    <type>
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Messager.java[Messager"/>
@@ -50,33 +43,12 @@
       <y="224"/>
    </type>
    <type>
-      <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Boutons.java[Boutons"/>
-      <height="-1"/>
-      <width="-1"/>
-      <x="545"/>
-      <y="370"/>
-   </type>
-   <type>
       <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{RepasComposite.java[RepasComposite"/>
       <height="-1"/>
       <width="-1"/>
       <x="286"/>
       <y="436"/>
    </type>
-   <type>
-      <name="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuComposite.java[MenuComposite"/>
-      <height="-1"/>
-      <width="-1"/>
-      <x="317"/>
-      <y="208"/>
-   </type>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Stationnement.java[Stationnement"/>
-      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MetsStationnement.java[MetsStationnement"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
       <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuGUI.java[MenuGUI"/>
@@ -86,36 +58,8 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuComposite.java[MenuComposite"/>
-      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{RepasComposite.java[RepasComposite"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
       <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuGUI.java[MenuGUI"/>
       <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
-      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Stationnement.java[Stationnement"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
-      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuComposite.java[MenuComposite"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
-      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{Boutons.java[Boutons"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -143,6 +87,62 @@
             <x="0"/>
             <y="-40"/>
          </bendpoint>
+      </bendpoints>
+   </relationship>
+   <type>
+      <name="=ALaSoupeGUI/src<zones{ZoneMenuDeLaSemaine.java[ZoneMenuDeLaSemaine"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="329"/>
+      <y="146"/>
+   </type>
+   <type>
+      <name="=ALaSoupeGUI/src<zones{ZoneDeStationnement.java[ZoneDeStationnement"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="915"/>
+      <y="144"/>
+   </type>
+   <type>
+      <name="=ALaSoupeGUI/src<zones{ZoneDeControle.java[ZoneDeControle"/>
+      <height="-1"/>
+      <width="-1"/>
+      <x="618"/>
+      <y="144"/>
+   </type>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
+      <targetType="=ALaSoupeGUI/src<zones{ZoneMenuDeLaSemaine.java[ZoneMenuDeLaSemaine"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupeGUI/src<zones{ZoneDeStationnement.java[ZoneDeStationnement"/>
+      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MetsStationnement.java[MetsStationnement"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupeGUI/src<zones{ZoneMenuDeLaSemaine.java[ZoneMenuDeLaSemaine"/>
+      <targetType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{RepasComposite.java[RepasComposite"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
+      <targetType="=ALaSoupeGUI/src<zones{ZoneDeStationnement.java[ZoneDeStationnement"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=ALaSoupeGUI/src<dominicm.alasoupe.gui{MenuShell.java[MenuShell"/>
+      <targetType="=ALaSoupeGUI/src<zones{ZoneDeControle.java[ZoneDeControle"/>
+      <bendpoints>
       </bendpoints>
    </relationship>
 </uml>

@@ -6,6 +6,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
+import pojos.Messager;
+
 import zones.ZoneDeControle;
 import zones.ZoneDeStationnement;
 import zones.ZoneMenuDeLaSemaine;

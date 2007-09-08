@@ -11,8 +11,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import dominicm.alasoupe.gui.Messager;
-import dominicm.alasoupe.gui.RepasComposite;
+import pojos.Messager;
+
+import composites.RepasComposite;
+
 
 /**
  * Partie visuel de la fenetre où on voit le menu.

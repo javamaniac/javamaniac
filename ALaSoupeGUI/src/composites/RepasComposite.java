@@ -1,4 +1,4 @@
-package dominicm.alasoupe.gui;
+package composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.dnd.DND;
@@ -13,6 +13,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
+
+import pojos.Messager;
 
 import dominicm.alasoupe.ALaSoupe;
 

@@ -1,10 +1,12 @@
-package dominicm.alasoupe.gui;
+package composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
+
+import pojos.Messager;
 
 import dominicm.alasoupe.recettes.Recette;
 

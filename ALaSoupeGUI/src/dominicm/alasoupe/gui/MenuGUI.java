@@ -3,7 +3,8 @@ package dominicm.alasoupe.gui;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import pojos.Messager;
+import dominicm.alasoupe.gui.pojos.Messager;
+
 
 /**
  * Programme principal en mode graphique.

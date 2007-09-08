@@ -1,4 +1,4 @@
-package composites;
+package dominicm.alasoupe.gui.composites;
 
 import org.eclipse.swt.dnd.DND;
 import org.eclipse.swt.dnd.DragSource;
@@ -11,8 +11,8 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
-import pojos.Messager;
 
+import dominicm.alasoupe.gui.pojos.Messager;
 import dominicm.alasoupe.recettes.Recette;
 
 /**

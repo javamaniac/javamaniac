@@ -1,4 +1,4 @@
-package zones;
+package dominicm.alasoupe.gui.zones;
 
 import java.util.List;
 
@@ -21,11 +21,11 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import pojos.Messager;
 
-import composites.MetsStationnement;
 
 import dominicm.alasoupe.ALaSoupe;
+import dominicm.alasoupe.gui.composites.MetsStationnement;
+import dominicm.alasoupe.gui.pojos.Messager;
 import dominicm.alasoupe.recettes.Recette;
 
 /**

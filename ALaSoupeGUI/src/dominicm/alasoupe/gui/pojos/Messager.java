@@ -1,4 +1,4 @@
-package pojos;
+package dominicm.alasoupe.gui.pojos;
 
 import java.util.ArrayList;
 import java.util.List;

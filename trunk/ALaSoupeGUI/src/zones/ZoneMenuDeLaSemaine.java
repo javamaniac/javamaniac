@@ -1,4 +1,4 @@
-package dominicm.alasoupe.gui;
+package zones;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -11,10 +11,18 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-public class MenuComposite
+import dominicm.alasoupe.gui.Messager;
+import dominicm.alasoupe.gui.RepasComposite;
+
+/**
+ * Partie visuel de la fenetre où on voit le menu.
+ * @author Dominic
+ *
+ */
+public class ZoneMenuDeLaSemaine
 {
 
-	public MenuComposite(Messager messager)
+	public ZoneMenuDeLaSemaine(Messager messager)
 	{
 		// setSize(new Point(300, 200));
 		Shell shell = messager.getShell();

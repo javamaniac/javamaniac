@@ -3,6 +3,11 @@ package dominicm.alasoupe.gui;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
+/**
+ * Programme principal en mode graphique.
+ * Ce programme appel MenuShell.
+ * @author Dominic
+ */
 public class MenuGUI
 {
 

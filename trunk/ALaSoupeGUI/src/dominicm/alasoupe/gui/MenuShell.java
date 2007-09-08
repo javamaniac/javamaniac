@@ -6,6 +6,17 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
+import zones.ZoneDeControle;
+import zones.ZoneDeStationnement;
+import zones.ZoneMenuDeLaSemaine;
+
+/**
+ * Fenêtre principal du logiciel.
+ * Création de la fenêtre avec le logo et le nom du programme.
+ * 
+ * @author Dominic
+ *
+ */
 public class MenuShell
 {
 	
@@ -18,15 +29,21 @@ public class MenuShell
 		// sShell.setSize(new Point(300, 200));
 		sShell.setLayout(gridLayout);
 	
+		// Définition de l'icone et du nom de la fenetre
 		sShell.setImage(new Image(messager.getDisplay(), "C:/wtools/Aptana/aptana.ico"));
 		sShell.setText(" À la soupe!");
 	
+		// définition de la couleur de fond de la fenetre
 		sShell.setBackground(Display.getDefault().getSystemColor(SWT.COLOR_DARK_BLUE));
 	
 
-		new MenuComposite(messager);
-		new Boutons(messager);
-		new Stationnement(messager);
+		// composition de la fenetre
+		// menu
+		new ZoneMenuDeLaSemaine(messager);
+		// boutons
+		new ZoneDeControle(messager);
+		// stationnement
+		new ZoneDeStationnement(messager);
 	
 		sShell.pack();
 

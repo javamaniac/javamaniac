@@ -1,4 +1,4 @@
-package composites;
+package dominicm.alasoupe.gui.composites;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.dnd.DND;
@@ -14,9 +14,9 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 
-import pojos.Messager;
 
 import dominicm.alasoupe.ALaSoupe;
+import dominicm.alasoupe.gui.pojos.Messager;
 
 public class RepasComposite {
 

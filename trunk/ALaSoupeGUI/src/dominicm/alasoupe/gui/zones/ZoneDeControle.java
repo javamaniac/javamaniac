@@ -1,4 +1,4 @@
-package zones;
+package dominicm.alasoupe.gui.zones;
 
 
 import java.util.List;
@@ -18,7 +18,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 
-import pojos.Messager;
+import dominicm.alasoupe.gui.pojos.Messager;
+
 
 
 /**

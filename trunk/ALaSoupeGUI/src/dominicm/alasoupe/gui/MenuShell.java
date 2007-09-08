@@ -6,11 +6,12 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import pojos.Messager;
+import dominicm.alasoupe.gui.pojos.Messager;
+import dominicm.alasoupe.gui.zones.ZoneDeControle;
+import dominicm.alasoupe.gui.zones.ZoneDeStationnement;
+import dominicm.alasoupe.gui.zones.ZoneMenuDeLaSemaine;
 
-import zones.ZoneDeControle;
-import zones.ZoneDeStationnement;
-import zones.ZoneMenuDeLaSemaine;
+
 
 /**
  * Fenêtre principal du logiciel.

@@ -1,4 +1,4 @@
-package zones;
+package dominicm.alasoupe.gui.zones;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -11,9 +11,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import pojos.Messager;
 
-import composites.RepasComposite;
+import dominicm.alasoupe.gui.composites.RepasComposite;
+import dominicm.alasoupe.gui.pojos.Messager;
 
 
 /**

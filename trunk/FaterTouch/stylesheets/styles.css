@@ -2,7 +2,7 @@
 	font-size: 80%;
 	color: #999;
 }
-#question {
+div.blocInfo {
 	font-size: 1.2em;
 	font-weight: bold;
 	text-align: center;
@@ -37,4 +37,15 @@ div.texteExplication .x-panel-body {
 div.bravoErreur {
 	margin-bottom: 10px;
 	font-size: 1.2em;
+}
+
+.blocResultat {
+	width: 400px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.resultatFinal {
+	font-size: 2em;
+	font-weight: bold;
 }

@@ -5,13 +5,63 @@
  */
 
 var questions = [];
-var question2;
 var overlay;
 var rootPanel;
 var resultatFinal = 0;
+// TODO rendre le chiffre automatique
+var nombreDeQuestion = 5;
 
-var resultat = new Ext.Panel(
+/*var resultatDIV = new Ext.Panel(
 {
+		id : 'resultatId',
+		html : '<div class="question">Votre résultat : <span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>'
+
+});*/
+
+var resultatPanel = new Ext.Panel(
+	{
+		//floating : true,
+		centered : true,
+		//modal : true,
+		//width: '400px',
+
+		layout : Ext.is.Phone ? 'fit' :
+		{
+			type : 'vbox',
+			align : 'center',
+			pack : 'center'
+		},
+
+		dockedItems : [
+		{
+			dock : 'top',
+			xtype : 'toolbar',
+			title : 'Résultat du questionnaire Fater'
+		},
+		{
+			html : '' // initialisé plustard
+		},
+		{
+			//dock : 'bottom',
+			xtype : 'button',
+			text : 'Recommencer le questionnaire',
+			style: 'margin-top: 10px;',
+			//width: '100px',
+			handler: function(e){
+				//sheet.hide();
+				//rootPanel.setActiveItem(nextActiveItem, 'cube');
+				window.location.reload();
+			}
+		}		
+		]//,
+
+		//items : items
+		//html: '' // initialisé plustard
+
+	});
+
+
+/*	
 	floating : true,
 	centered : true,
 	modal : true,
@@ -27,7 +77,7 @@ var resultat = new Ext.Panel(
 	{
 		html : "<h1>100 %</h1>recommencer."
 	}]
-});
+});*/
 
 // ----------------------------------
 // --- chargement du modèle : questions
@@ -94,6 +144,8 @@ store.load(
 			questions.push(insertQuestion("<div class='titreNumQuestion'>Question " + (itemCpt + 1) + "</div>" + question.get('textQuestion'), choixReponses, question.get('bonneReponse'), question.get('texteExplicatif'), ++itemCpt));
 
 		});
+		
+		questions.push([resultatPanel]);
 	}
 });
 
@@ -109,6 +161,7 @@ function insertQuestion(question, arrayReponses, bonneReponse, texteExplication,
 	var items = [new Ext.Panel(
 	{
 		id : 'question',
+		cls: 'blocInfo',
 		html : '<div class="question">' + question + '</div>'
 
 	})].concat(creationBoutons(arrayReponses, bonneReponse, texteExplication, nextActiveItem));
@@ -260,7 +313,23 @@ function creationBouton(texte, estBonneReponse, texteExplication, nextActiveItem
 			//datePicker.show();
 			if (estBonneReponse) {
 				resultatFinal++;
+				console.log("Bonne réponse : " + resultatFinal);
 			}
+			else
+			{
+				console.log("Mauvaise réponse : " + resultatFinal);
+			}
+			
+			// TODO à ne faire qu'après la dernière question
+			resultatPanel.update(
+			{
+				html : '<div class="blocInfo blocResultat">Votre résultat : <span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>'
+			});		
+
+				
+				
+				//'<div class="blocInfo blocResultat">Votre résultat : <span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>');
+			
 			sheet.show();
 
 			//var bravo = (succes) ? 'Bravo, vous avez raison!\n\n' : 'Ce n\'est pas tout à fait ça.';

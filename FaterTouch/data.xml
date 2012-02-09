@@ -1,6 +1,10 @@
+<!DOCTYPE questions [
+	<!ENTITY retour "&lt;br/&gt;">
+]>
 <questions>
     <question>
-        <textQuestion>Dans quel domaine se font le plus d’accommodements raisonnables au Québec?</textQuestion>
+        <textQuestion>Dans quel domaine se font le plus&retour;
+    					d’accommodements raisonnables au Québec?</textQuestion>
         <reponses>
             <reponse>Auprès des personnes handicapées</reponse>
             <reponse>Auprès des groupes religieux</reponse>
@@ -12,7 +16,8 @@
     
     
     <question>
-        <textQuestion>Combien de Québécois s’identifient encore aujourd’hui à la religion catholique?</textQuestion>
+        <textQuestion>Combien de Québécois s’identifient encore&retour;
+        				aujourd’hui à la religion catholique?</textQuestion>
         <reponses>
             <reponse>500 000</reponse>
             <reponse>3 000 0000</reponse>
@@ -24,11 +29,12 @@
     
     
     <question>
-        <textQuestion>Quel profil de personne retrouve-t-on principalement dans les organisations dites «sectes»?</textQuestion>
+        <textQuestion>Quel profil de personne retrouve-t-on principalement&retour;
+        				dans les organisations dites «sectes»?</textQuestion>
         <reponses>
-            <reponse>Des gens vulnérables psychologiquement en recherche de réponses rapides</reponse>
-            <reponse>Des personnes issues d’un milieu peu éduqué, démunies et naïves</reponse>
-            <reponse>Des individus d’horizons divers représentant exactement la composition actuelle de la société qui sont en quête spirituelle</reponse>
+            <reponse>Des gens vulnérables psychologiquement&retour; en recherche de réponses rapides</reponse>
+            <reponse>Des personnes issues d’un milieu peu éduqué,&retour; démunies et naïves</reponse>
+            <reponse>Des individus d’horizons divers représentant&retour; exactement la composition actuelle&retour;  de la société qui sont en quête spirituelle</reponse>
         </reponses>
         <bonneReponse>3</bonneReponse>
 	<texteExplicatif>Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de ses parents ou qui se dit athée.<br/><br/>Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe cependant sur l’échelle des croyances extrêmes.</texteExplicatif>
@@ -36,7 +42,8 @@
     
     
     <question>
-        <textQuestion>Les hommes peuvent-ils être victimes de la polygamie?</textQuestion>
+        <textQuestion>Les hommes peuvent-ils être&retour;
+        				victimes de la polygamie?</textQuestion>
         <reponses>
             <reponse>Oui</reponse>
             <reponse>Non</reponse>
@@ -47,7 +54,9 @@
     
     
     <question>
-        <textQuestion>En France, le principe de séparation des Églises et de l’État s’applique-t-il de la même façon sur tout le territoire?</textQuestion>
+        <textQuestion>En France, le principe de séparation des Églises&retour;
+        				et de l’État s’applique-t-il de la même façon&retour;
+        				sur tout le territoire?</textQuestion>
         <reponses>
             <reponse>Oui</reponse>
             <reponse>Non</reponse>
@@ -56,36 +65,3 @@
         <texteExplicatif>Pour des raisons historiques, il y a en France 9 régimes différents de séparation des Églises et de l’État. Dans plusieurs départements français,  l’État reconnaît encore officiellement certaines religions et les ministres du culte sont des fonctionnaires dont le salaire est indexé sur les militaires de l’armée française.</texteExplicatif>
     </question>
 </questions>
-
-<!--   
-    //var question3 = 
-    insertQuestion(
-    "Question 3 : Quel profil de personne retrouve-t-on principalement dans les organisations dites «sectes»?",
-    [
-    "Des gens vulnérables psychologiquement en recherche de réponses rapides", 
-    "Des personnes issues d’un milieu peu éduqué, démunies et naïves", 
-    "Des individus d’horizons divers représentant exactement la composition actuelle de la société qui sont en quête spirituelle"
-    ],
-    1,
-    "Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de ses parents ou qui se dit athée. <br>Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe cependant sur l’échelle des croyances extrêmes.n",
-        3
-        ),    
-        
-        //var question4 = 
-        insertQuestion(
-        "Question 4 : Les hommes peuvent-ils être victimes de la polygamie?",
-        ["Oui", "Non"],
-        1,
-        "Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de ses parents ou qui se dit athée. <br>Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe cependant sur l’échelle des croyances extrêmes.n",
-            4
-            ), 
-            //var question5 = 
-            insertQuestion(
-            "Question 5 : En France, qui se pose comme un modèle de laïcité, est-ce que l’état est complètement séparé de l’Église?",
-            ["Oui", "Non"],
-            1,
-            "Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de ses parents ou qui se dit athée. <br>Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe cependant sur l’échelle des croyances extrêmes.n",
-                5
-                )//; 
-                ]    
-                -->

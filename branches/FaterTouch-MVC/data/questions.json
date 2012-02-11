@@ -1,0 +1,109 @@
+{
+   "items":[
+      {
+         "model":"Question",
+         "text":"Pourquoi 1?",
+         "info":"Bla bla bla...",
+         "items":[
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"vrai",
+               "info":"erreur",
+               "leaf":true
+            },
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"faux",
+               "info":"bravo",
+               "leaf":true
+            }
+         ],
+         "leaf":false
+      },
+      {
+         "model":"Question",
+         "text":"Pourquoi 2?",
+         "info":"Bla bla bla...",
+         "items":[
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"lapin",
+               "info":"erreur",
+               "leaf":true
+            },
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"rat",
+               "info":"erreur",
+               "leaf":true
+            },
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"voiture",
+               "info":"bravo",
+               "leaf":true
+            },
+            {
+               "model":"Reponse",
+               "items":[
+
+               ],
+               "text":"souris",
+               "info":"erreur",
+               "leaf":true
+            }
+         ]
+      },
+    {
+	"model":"Question",
+	"text":"Pourquoi 3?",
+	"info":"Bla bla bla...",
+	"items":[
+	    {
+		"model":"Reponse",
+		"items":[
+
+		],
+		"text":"10",
+		"info":"bravo",
+		"leaf":true
+	    },
+	    {
+		"model":"Reponse",
+		"items":[
+
+		],
+		"text":"20",
+		"info":"erreur",
+		"leaf":true
+	    },
+	    {
+		"model":"Reponse",
+		"items":[
+
+		],
+		"text":"30",
+		"info":"erreur",
+		"leaf":true
+	    }
+	],
+	"leaf":false
+    }
+
+   ]
+}

@@ -1,0 +1,14 @@
+<questions>
+    <question>
+	    <content>Quel est la différence entre...</content>
+	    <choix-list>card1</choix-list>
+    </question>
+    <question>
+	    <cls>card2</cls>
+	    <content>This is the second card, you need to use the carousel controls to get here.</content>
+    </question>
+    <question>
+        <cls>card3</cls>
+        <content>The final card, it can be accessed using a button as well!</content>
+    </question>
+</questions>

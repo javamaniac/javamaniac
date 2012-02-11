@@ -1,0 +1,70 @@
+.metadata {
+	font-size: 80%;
+	color: #999;
+}
+div.blocInfo {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+	
+-webkit-border-radius: 0.4em;
+border-radius: 0.4em;
+background: white;
+padding: 10px;
+border: 1px solid black;
+/*text-shadow: rgba(225, 225, 225, 0.5) 0 -0.08em 0;*/
+-webkit-box-shadow: rgba(5, 5, 5, 0.1) 0.2em 0.2em 0;	
+}
+
+
+div.titreNumQuestion {
+	font-weight: normal; 
+	font-size: 0.8em;
+}
+
+
+/* boutons vert foncé */
+/*.x-button.x-button-confirm, .x-button.x-button-confirm.x-button-back::after, .x-button.x-button-confirm.x-button-forward::after, .x-toolbar .x-button.x-button-confirm, .x-toolbar .x-button.x-button-confirm.x-button-back::after, .x-toolbar .x-button.x-button-confirm.x-button-forward::after, .x-button.x-button-confirm-round, .x-button.x-button-confirm-round.x-button-back::after, .x-button.x-button-confirm-round.x-button-forward::after, .x-toolbar .x-button.x-button-confirm-round, .x-toolbar .x-button.x-button-confirm-round.x-button-back::after, .x-toolbar .x-button.x-button-confirm-round.x-button-forward::after, .x-button.x-button-confirm-small, .x-button.x-button-confirm-small.x-button-back::after, .x-button.x-button-confirm-small.x-button-forward::after, .x-toolbar .x-button.x-button-confirm-small, .x-toolbar .x-button.x-button-confirm-small.x-button-back::after, .x-toolbar .x-button.x-button-confirm-small.x-button-forward::after {
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c2fa3b), color-stop(2%, #85bb05), color-stop(100%, #547503));
+background-image: -webkit-linear-gradient(#fff,#62792b 4%,#455e08);
+}*/
+
+div.texteExplication .x-panel-body {
+	padding: 10px;
+}
+
+div.bravoErreur {
+	margin-bottom: 10px;
+	font-size: 1.2em;
+}
+
+.blocResultat {
+	width: 23em;
+	margin: auto;
+	/*margin-top: 5%;*/
+	/*margin-top: 5%;*/
+}
+
+.resultatFinal {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+/* barre de titre plus haute */
+.x-toolbar-title {
+	line-height: 1.5em;
+	margin-top: 0.6em;
+}
+.x-toolbar {
+	height: 5em;
+}
+
+/* Toute plus gros! */
+body.x-desktop {
+	font-size: 150% !important;
+}
+body {
+	font-size: 150% !important;
+}

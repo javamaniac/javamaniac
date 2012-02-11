@@ -40,12 +40,31 @@ div.bravoErreur {
 }
 
 .blocResultat {
-	width: 400px;
+	width: 23em;
 	margin: auto;
-	margin-top: 30px;
+	/*margin-top: 5%;*/
+	/*margin-top: 5%;*/
 }
 
 .resultatFinal {
 	font-size: 2em;
 	font-weight: bold;
+}
+
+
+/* barre de titre plus haute */
+.x-toolbar-title {
+	line-height: 1.5em;
+	margin-top: 0.6em;
+}
+.x-toolbar {
+	height: 5em;
+}
+
+/* Toute plus gros! */
+body.x-desktop {
+	font-size: 150% !important;
+}
+body {
+	font-size: 150% !important;
 }

@@ -10,6 +10,7 @@ var rootPanel;
 var resultatFinal = 0;
 // TODO rendre le chiffre automatique
 var nombreDeQuestion = 5;
+var TITRE = "Faculté de théologie et d\'études religieuses<br/>Le religieux contemporain";
 
 /*var resultatDIV = new Ext.Panel(
 {
@@ -22,6 +23,7 @@ var resultatPanel = new Ext.Panel(
 	{
 		//floating : true,
 		centered : true,
+		scroll: 'vertical',
 		//modal : true,
 		//width: '400px',
 
@@ -36,7 +38,7 @@ var resultatPanel = new Ext.Panel(
 		{
 			dock : 'top',
 			xtype : 'toolbar',
-			title : 'Résultat du questionnaire Fater'
+			title : TITRE
 		},
 		{
 			html : '' // initialisé plustard
@@ -184,7 +186,7 @@ function insertQuestion(question, arrayReponses, bonneReponse, texteExplication,
 		{
 			dock : 'top',
 			xtype : 'toolbar',
-			title : 'Questionnaire Fater'
+			title : TITRE
 		}],
 
 		items : items
@@ -293,10 +295,12 @@ function creationBouton(texte, estBonneReponse, texteExplication, nextActiveItem
 			//width: '100px',
 			handler: function(e){
 				sheet.hide();
-				rootPanel.setActiveItem(nextActiveItem, 'cube');
+				rootPanel.setActiveItem(nextActiveItem, 'flip'); //cube, slide 
 			}
 		}]
 	});
+
+
 
 
 	// Boutons des réponses
@@ -319,11 +323,31 @@ function creationBouton(texte, estBonneReponse, texteExplication, nextActiveItem
 			{
 				console.log("Mauvaise réponse : " + resultatFinal);
 			}
+
+			var xBonneReponse = (resultatFinal > 1) ? " bonnes réponses" : " bonne réponse";
+			var texteFinal = '' +
+				'<div>' +
+				'	<div>&nbsp;</div>' +
+				'	<div class="blocInfo blocResultat">' +
+				'		<div>' +
+				'			<img src="images/etoile.jpg" style="' + ((resultatFinal>0) ? '' : 'opacity: 0.3;') + '"/>' +
+				'			<img src="images/etoile.jpg" style="' + ((resultatFinal>1) ? '' : 'opacity: 0.3;') + '"/>' +
+				'			<img src="images/etoile.jpg" style="' + ((resultatFinal>2) ? '' : 'opacity: 0.3;') + '"/>' +
+				'			<img src="images/etoile.jpg" style="' + ((resultatFinal>3) ? '' : 'opacity: 0.3;') + '"/>' +
+				'			<img src="images/etoile.jpg" style="' + ((resultatFinal>4) ? '' : 'opacity: 0.3;') + '"/>' +
+				'		</div>' +
+				'		<div>Vous avez obtenu<br/>' + resultatFinal + xBonneReponse + ' sur 5.</div>' +
+				'		<div class="texte" style="font-size: 0.8em; width:75%; margin:auto;font-weight: normal;margin-top: 20px;text-align: left;">' +
+				'			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.' +
+				'		</div>' +
+				'	</div>' +
+				'</div>';
 			
 			// TODO à ne faire qu'après la dernière question
 			resultatPanel.update(
 			{
-				html : '<div class="blocInfo blocResultat">Votre résultat : <span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>'
+				html : texteFinal 
+				//'<div>&nbsp;</div><div class="blocInfo blocResultat">Vous avez obtenu<br/>' + resultatFinal + xBonneReponse + ' sur 5. </div><div class="texte" style="font-size:1.0em; width:75%; margin:auto;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).<br/>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</div>' //<span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>'
 			});		
 
 				

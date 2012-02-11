@@ -8,81 +8,44 @@ var questions = [];
 var overlay;
 var rootPanel;
 var resultatFinal = 0;
-// TODO rendre le chiffre automatique
-var nombreDeQuestion = 5;
-var TITRE = "Faculté de théologie et d\'études religieuses<br/>Le religieux contemporain";
-
-/*var resultatDIV = new Ext.Panel(
-{
-		id : 'resultatId',
-		html : '<div class="question">Votre résultat : <span class="resultatFinal">' + (resultatFinal * 100 / nombreDeQuestion) + ' %</span></div>'
-
-});*/
-
-var resultatPanel = new Ext.Panel(
-	{
-		//floating : true,
-		centered : true,
-		scroll: 'vertical',
-		//modal : true,
-		//width: '400px',
-
-		layout : Ext.is.Phone ? 'fit' :
-		{
-			type : 'vbox',
-			align : 'center',
-			pack : 'center'
-		},
-
-		dockedItems : [
-		{
-			dock : 'top',
-			xtype : 'toolbar',
-			title : TITRE
-		},
-		{
-			html : '' // initialisé plustard
-		},
-		{
-			//dock : 'bottom',
-			xtype : 'button',
-			text : 'Recommencer le questionnaire',
-			style: 'margin-top: 10px;',
-			//width: '100px',
-			handler: function(e){
-				//sheet.hide();
-				//rootPanel.setActiveItem(nextActiveItem, 'cube');
-				window.location.reload();
-			}
-		}		
-		]//,
-
-		//items : items
-		//html: '' // initialisé plustard
-
-	});
+var nombreDeQuestion;
+var TITRE;
 
 
-/*	
-	floating : true,
-	centered : true,
-	modal : true,
-	width : '400px',
 
-	dockedItems : [
-	{
-		dock : 'top',
-		xtype : 'toolbar',
-		title : 'Résultat'
-	}],
-	items : [
-	{
-		html : "<h1>100 %</h1>recommencer."
-	}]
-});*/
+
+
 
 // ----------------------------------
 // --- chargement du modèle : questions
+
+Ext.regModel('Titre',
+{
+	fields : ['titre'],
+	proxy :
+	{
+		type : 'ajax',
+		url : 'data.xml',
+		reader :
+		{
+			type : 'xml',
+			record : 'questions'
+		}
+	}
+});
+var storeTitre = new Ext.data.Store(
+{
+	model : 'Titre',
+	autoLoad : true
+});
+storeTitre.load(
+{
+	callback : function()
+	{
+		TITRE = storeTitre.first().get('titre');
+	}
+});
+
 
 Ext.regModel('Question',
 {
@@ -147,9 +110,57 @@ store.load(
 
 		});
 		
+		nombreDeQuestion = itemCpt;
+		
 		questions.push([resultatPanel]);
 	}
 });
+
+
+
+var resultatPanel = new Ext.Panel(
+	{
+		//floating : true,
+		centered : true,
+		scroll: 'vertical',
+		//modal : true,
+		//width: '400px',
+
+		layout : Ext.is.Phone ? 'fit' :
+		{
+			type : 'vbox',
+			align : 'center',
+			pack : 'center'
+		},
+
+		dockedItems : [
+		{
+			dock : 'top',
+			xtype : 'toolbar',
+			title : TITRE
+		},
+		{
+			html : '' // initialisé plustard
+		},
+		{
+			//dock : 'bottom',
+			xtype : 'button',
+			text : 'Recommencer le questionnaire',
+			style: 'margin-top: 10px;',
+			//width: '100px',
+			handler: function(e){
+				//sheet.hide();
+				//rootPanel.setActiveItem(nextActiveItem, 'cube');
+				window.location.reload();
+			}
+		}		
+		]//,
+
+		//items : items
+		//html: '' // initialisé plustard
+
+	});
+
 
 // ----------------------------------
 

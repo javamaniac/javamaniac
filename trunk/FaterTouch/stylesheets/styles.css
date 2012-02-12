@@ -8,13 +8,13 @@ div.blocInfo {
 	text-align: center;
 	margin-bottom: 10px;
 	
--webkit-border-radius: 0.4em;
-border-radius: 0.4em;
-background: white;
-padding: 10px;
-border: 1px solid black;
-/*text-shadow: rgba(225, 225, 225, 0.5) 0 -0.08em 0;*/
--webkit-box-shadow: rgba(5, 5, 5, 0.1) 0.2em 0.2em 0;	
+	-webkit-border-radius: 0.4em;
+	border-radius: 0.4em;
+	background: white;
+	padding: 10px 30px 40px 30px;
+	border: 1px solid black;
+	/*text-shadow: rgba(225, 225, 225, 0.5) 0 -0.08em 0;*/
+	-webkit-box-shadow: rgba(5, 5, 5, 0.1) 0.2em 0.2em 0;	
 }
 
 
@@ -51,6 +51,9 @@ div.bravoErreur {
 	font-weight: bold;
 }
 
+.texteResultat div {
+	margin: 10px;
+}
 
 /* barre de titre plus haute */
 .x-toolbar-title {
@@ -68,3 +71,28 @@ body.x-desktop {
 body {
 	font-size: 150% !important;
 }
+
+
+a {
+	color: green;
+	text-decoration: none;
+	border-bottom: 1px solid #DDD;
+}
+
+li {
+	margin-bottom: 5px; 
+}
+
+.toolbarReponse {
+	height: 3em;
+}
+
+div.boutonQuestionSuivante {
+	margin: auto !important;
+	width: 80%;	
+}
+div.boutonQuestionSuivante span {
+	font-size: 1em !important;
+
+}
+

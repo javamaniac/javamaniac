@@ -1,0 +1,84 @@
+<!DOCTYPE questions [
+	<!ENTITY retour "&lt;br/&gt;">
+]>
+<questions>
+	<titre>Faculté de théologie et d'études religieuses&retour;Le religieux contemporain</titre>
+	
+    <question>
+        <textQuestion>Dans quel domaine se font le plus&retour;
+    					d’accommodements raisonnables au Québec?</textQuestion>
+        <reponses>
+            <reponse>Auprès des personnes handicapées</reponse>
+            <reponse>Auprès des groupes religieux</reponse>
+            <reponse>Auprès des immigrants</reponse>
+        </reponses>
+        <bonneReponse>1</bonneReponse>
+        <texteExplicatif>
+        	95 % des accommodements se font auprès des personnes handicapées.&retour;&retour;
+        	Moins de 2% des demandes d’accommodement raisonnable sont fondées sur un motif religieux et plus de la moitié de ces demandes sont formulées par des Protestants établis au Canada depuis longtemps.&retour;&retour;
+       	</texteExplicatif>
+    </question>
+    
+    
+    <question>
+        <textQuestion>Selon les derniers chiffres de Statistique Canada,&retour;
+        				combien de Québécois s’identifient à la religion catholique ?</textQuestion>
+        <reponses>
+            <reponse>Moins de 500 000</reponse>
+            <reponse>Environ 3 000 0000</reponse>
+            <reponse>Près de 6 000 000</reponse>
+        </reponses>
+        <bonneReponse>3</bonneReponse>
+        <texteExplicatif>
+        	Selon le recensement de 2001, 5 939 715 Québécois s’identifient à la religion catholique, 413 190 se disent sans appartenance religieuse et 335 590 sont de confession protestante.&retour;&retour;
+			Donc, la majorité de la population considère qu’elle appartient à la religion catholique. Le catholicisme demeure un vecteur identitaire pour la plupart des Québécois. &retour;&retour;
+			Cependant, des recherches récentes menées à travers le Canada, tendent vers une thèse de polarisation de la population. Nous observons effectivement qu’un écart est de plus en plus grand entre croyants et athées. C’est-à-dire que les individus sont de plus en plus croyants ou de plus en plus incroyants.&retour;&retour;
+        </texteExplicatif>
+    </question>
+    
+    
+    <question>
+        <textQuestion>Quel profil de personne retrouve-t-on&retour;principalement dans les organisations dites «&#xa0;sectes&#xa0;»?</textQuestion>
+        <reponses>
+            <reponse>Des gens vulnérables psychologiquement&retour; en recherche de réponses rapides</reponse>
+            <reponse>Des personnes issues d’un milieu peu éduqué,&retour; démunies et naïves</reponse>
+            <reponse>Des individus d’horizons divers représentant&retour; exactement la composition actuelle&retour;  de la société qui sont en quête spirituelle</reponse>
+        </reponses>
+        <bonneReponse>3</bonneReponse>
+		<texteExplicatif>
+			La diversité des personnes qui composent ces organisations représentent celle de la société actuelle. La quête spirituelle est ce qu’ils ont en commun.&retour;&retour;
+			Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de leurs parents ou qui se dit athée.&retour;&retour;  
+			Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe sur l’échelle des croyances extrêmes.&retour;&retour;
+		</texteExplicatif>
+    </question>
+    
+    
+    <question>
+        <textQuestion>Les hommes peuvent-ils être&retour;
+        				victimes de la polygamie?</textQuestion>
+        <reponses>
+            <reponse>Oui</reponse>
+            <reponse>Non</reponse>
+        </reponses>
+        <bonneReponse>2</bonneReponse>
+        <texteExplicatif>
+        	Avez-vous entendu parler du phénomène des «&#xa0;Lost boys&#xa0;»?&retour;&retour; 
+			Chaque année, aux États-Unis et au Canada entre 400 et 1000 jeunes hommes âgés de 13 à 21 ans sont exclus de la communauté polygame dans laquelle ils ont grandit. Cette pratique permet de conserver un plus petit nombre d’hommes par rapport à celui des femmes disponibles pour le mariage.&retour;&retour;
+			Les jeunes hommes exclus sont condamnés à vivre dans une société qu’ils ne connaissent pas puisqu’ils ont grandi dans un groupe fermé. Généralement peu éduqués et peu formés, ces garçons se retrouvent sans argent, sans repères, et confrontés brutalement à tout ce qui leur était interdit jusque là: alcool, drogue et sexualité.&retour;&retour;
+        </texteExplicatif>
+    </question>
+    
+    
+    <question>
+        <textQuestion>En France, la séparation des Églises&retour;et de l’État est-il absolu?</textQuestion>
+        <reponses>
+            <reponse>Oui</reponse>
+            <reponse>Non</reponse>
+        </reponses>
+        <bonneReponse>2</bonneReponse>
+        <texteExplicatif>
+        	Pour des raisons historiques, il y a, en France, neuf régimes différents de séparation des Églises et de l’État. Dans plusieurs départements français,  l’État reconnaît encore officiellement certaines religions et les ministres du culte sont des fonctionnaires. C’est-à-dire qu’ils reçoivent leur salaire de l’État français.&retour;&retour;
+    	</texteExplicatif>
+    </question>
+    
+</questions>

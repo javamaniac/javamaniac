@@ -31,7 +31,7 @@ new Ext.Application(
 
 FaterTouch.questions = [];
 FaterTouch.resultatFinal = 0;
-FaterTouch.nombreDeQuestion;
+FaterTouch.nombreDeQuestion = 5;
 FaterTouch.TITRE;
 
 
@@ -65,7 +65,7 @@ FaterTouch.storeTitre.load(
 {
 	callback : function()
 	{
-		console.debug('FaterTouch.storeTitre.load');
+		//console.debug('FaterTouch.storeTitre.load');
 		FaterTouch.TITRE = FaterTouch.storeTitre.first().get('titre');
 		//FaterTouch.resultatPanel.getDockedComponent('toolbar').setTitle('www');//FaterTouch.TITRE
 		resultatPanelToolbar.setTitle(FaterTouch.TITRE);
@@ -123,12 +123,12 @@ FaterTouch.store.load(
 
 		FaterTouch.store.each(function(question)
 		{
-			console.log("log Question : " + question.get('textQuestion') + ":");
+			//console.log("log Question : " + question.get('textQuestion') + ":");
 
 			var choixReponses = [];
 			question.reponses().each(function(reponse)
 			{
-				console.log("	Reponses : " + reponse.raw.textContent);
+				//console.log("	Reponses : " + reponse.raw.textContent);
 				choixReponses.push(reponse.raw.textContent);
 			});
 			
@@ -136,7 +136,8 @@ FaterTouch.store.load(
 
 		});
 		
-		FaterTouch.nombreDeQuestion = itemCpt;
+		//console.info('itemCpt:' + itemCpt);
+		//FaterTouch.nombreDeQuestion = itemCpt;
 		
 		FaterTouch.questions.push([FaterTouch.resultatPanel]);
 	}
@@ -262,7 +263,9 @@ function creationBouton(texte, estBonneReponse, texteExplication, nextActiveItem
 	 });*/
 
 	var reponse = "<div class='bravoErreur'>" + ((estBonneReponse) ? 'Bonne réponse!' : 'Mauvaise réponse!') + "</div>" + texteExplication;
-
+	var texteBouton = (nextActiveItem >= FaterTouch.nombreDeQuestion) ? 'Voir vos résultats ⇨' : 'Question suivante ⇨';
+	//console.info('nextActiveItem:' + nextActiveItem);
+	//console.info('FaterTouch.nombreDeQuestion:' + FaterTouch.nombreDeQuestion);
 
 	// volet de la bonne réponse
 	var sheet = new Ext.Sheet(
@@ -335,7 +338,7 @@ function creationBouton(texte, estBonneReponse, texteExplication, nextActiveItem
 			items: [
 				{
 					xtype : 'button',
-					text : 'Question suivante ⇨',
+					text : texteBouton,
 					//style: 'margin-top: 10px;',
 					cls: 'boutonQuestionSuivante',
 					centered : true,

@@ -22,7 +22,7 @@
     
     <question>
         <textQuestion>Selon les derniers chiffres de Statistique Canada,&retour;
-        				combien de Québécois s’identifient à la religion catholique ?</textQuestion>
+        				combien de Québécois s’identifient à la religion catholique?</textQuestion>
         <reponses>
             <reponse>Moins de 500 000</reponse>
             <reponse>Environ 3 000 0000</reponse>
@@ -38,7 +38,7 @@
     
     
     <question>
-        <textQuestion>Quel profil de personne retrouve-t-on&retour;principalement dans les organisations dites «&#xa0;sectes&#xa0;»?</textQuestion>
+        <textQuestion>Quel profil d'individus retrouve-t-on&retour;principalement dans les organisations dites «&#xa0;sectes&#xa0;»?</textQuestion>
         <reponses>
             <reponse>Des gens vulnérables psychologiquement&retour; en recherche de réponses rapides</reponse>
             <reponse>Des personnes issues d’un milieu peu éduqué,&retour; démunies et naïves</reponse>
@@ -46,7 +46,7 @@
         </reponses>
         <bonneReponse>3</bonneReponse>
 		<texteExplicatif>
-			La diversité des personnes qui composent ces organisations représentent celle de la société actuelle. La quête spirituelle est ce qu’ils ont en commun.&retour;&retour;
+			La diversité des personnes qui composent ces organisations représentent celle de la société actuelle. La quête spirituelle est ce qu’elles ont en commun.&retour;&retour;
 			Les recherches ont démontré qu’il n’existe pas de profil d’individus décidant d’adhérer à une organisation sectaire pas plus qu’il existe un profil d’individus qui se convertit à une religion traditionnelle autre que celle de leurs parents ou qui se dit athée.&retour;&retour;  
 			Une secte se définit comme un groupe religieux ou idéologique créé en rupture contestataire envers une religion traditionnelle et/ou les valeurs des sociétés modernes. Un groupe devient sectaire en ce sens qu’il peut déraper vers une dangerosité, surtout si ses frontières avec la société sont durcies. La secte se situe sur l’échelle des croyances extrêmes.&retour;&retour;
 		</texteExplicatif>
@@ -60,7 +60,7 @@
             <reponse>Oui</reponse>
             <reponse>Non</reponse>
         </reponses>
-        <bonneReponse>2</bonneReponse>
+        <bonneReponse>1</bonneReponse>
         <texteExplicatif>
         	Avez-vous entendu parler du phénomène des «&#xa0;Lost boys&#xa0;»?&retour;&retour; 
 			Chaque année, aux États-Unis et au Canada entre 400 et 1000 jeunes hommes âgés de 13 à 21 ans sont exclus de la communauté polygame dans laquelle ils ont grandit. Cette pratique permet de conserver un plus petit nombre d’hommes par rapport à celui des femmes disponibles pour le mariage.&retour;&retour;
@@ -70,7 +70,7 @@
     
     
     <question>
-        <textQuestion>En France, la séparation des Églises&retour;et de l’État est-il absolu?</textQuestion>
+        <textQuestion>En France, la séparation des Églises&retour;et de l’État est-elle absolue?</textQuestion>
         <reponses>
             <reponse>Oui</reponse>
             <reponse>Non</reponse>

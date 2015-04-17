@@ -1,0 +1,1 @@
+Ce projet est un lieu d'apprentissage. Je veux tester les designs patterns et autres.
